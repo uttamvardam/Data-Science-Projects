@@ -1,16 +1,40 @@
 # 🚗 Vehicle Damage Detection App
 
-This application uses **Streamlit** and **Deep Learning (ResNet50)** to detect the type of damage in a car from an uploaded image.
+
+### Project Overview
+
+This project develops an automated car damage detection system based on deep learning, designed to classify the condition of a vehicle’s front and rear into six predefined categories. The solution integrates a trained deep learning model with a Streamlit application, enabling fast, accurate, and user-friendly damage assessment. By automating the inspection process, the system helps VROOM Cars improve the efficiency, consistency, and reliability of vehicle evaluations while providing a scalable foundation for future enhancements.
 
 
-Simply upload an image of a car, and the model predicts the damage category.
+### Business Problem
+
+* Manual vehicle damage inspection is time-consuming, labor-intensive, and prone to human error, leading to inconsistent assessments.
+* VROOM Cars requires a faster, more reliable, and standardized vehicle damage evaluation process.
+
+
+### Deliverables
+
+* A trained deep learning model for car damage detection along with the complete source code.
+* A model that achieves a minimum classification accuracy of **75%**.
+* A Streamlit web application that allows users to upload or drag and drop a car image.
+* Real-time prediction of the uploaded image into one of the following six categories:
+
+  * Front Normal
+  * Front Breakage
+  * Front Crushed
+  * Rear Normal
+  * Rear Breakage
+  * Rear Crushed
+  
+
+* An intuitive and user-friendly interface for efficient vehicle damage assessment.
 
 
 ![app_screenshot](app_screenshot3.png)
 
 ---
 
-## Model Details
+### Model Details
 
 - **Model:** ResNet50 (Transfer Learning)
 - **Training Images:** Approximately 2,300
@@ -30,7 +54,6 @@ Simply upload an image of a car, and the model predicts the damage category.
 - **Validation Accuracy:** ~80%
 
 ---
-
 ## Installation
 
 Install the required dependencies:
@@ -40,7 +63,6 @@ pip install -r requirements.txt
 ```
 
 ---
-
 ## Run the Application
 
 Start the Streamlit application:
@@ -52,18 +74,16 @@ streamlit run app.py
 The application will open in your default web browser.
 
 ---
+### Technologies Used
 
-## Technologies Used
-
-- Python
-- Streamlit
-- PyTorch
-- Torchvision
-- ResNet50
-- Pillow
+* **Python** – Core programming language for model development and application.
+* **PyTorch** – Deep learning framework used for training and inference.
+* **Torchvision** – Provides pre-trained models (ResNet50) and image preprocessing utilities.
+* **ResNet50** – Pre-trained convolutional neural network used for transfer learning.
+* **Streamlit** – Framework for building the interactive web application.
+* **Pillow (PIL)** – Image processing library for loading and handling uploaded images.
 
 ---
-
 ## Project Workflow
 
 1. Upload a car image.
@@ -72,7 +92,6 @@ The application will open in your default web browser.
 4. The predicted damage type is displayed on the screen.
 
 ---
-
 ## Notes
 
 - Upload clear, high-quality images.
