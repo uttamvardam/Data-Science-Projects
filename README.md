@@ -1,6 +1,6 @@
 # 📊 Data Science Portfolio
+This repository showcases a collection of my data science projects, demonstrating expertise in data analysis, machine learning, deep learning, natural language processing (NLP), and data visualization. Each project reflects practical, real-world applications built using modern tools and techniques.
 
-Welcome to my Data Science portfolio. This repository organizes all my Data Science projects by domain.
 
 ---
 
