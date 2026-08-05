@@ -13,7 +13,7 @@ This repository showcases a collection of my data science projects, demonstratin
 
 # 🧠 Deep Learning
 
-- Vehicle Damage Detection (https://github.com/uttamvardam/Data_Science_Projects/tree/main/Vehicle%20Damage%20Detection)
+- Vehicle Damage Detection https://github.com/uttamvardam/Data_Science_Projects/tree/main/Vehicle%20Damage%20Detection
 
 ---
 
