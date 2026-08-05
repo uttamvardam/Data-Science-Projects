@@ -15,13 +15,13 @@ This repository showcases a collection of my data science projects, demonstratin
 
 1. [Vehicle Damage Detection](https://github.com/uttamvardam/Data_Science_Projects/tree/main/Vehicle%20Damage%20Detection)
 
-**Description**
+**Description:**
 Built a deep learning-based vehicle damage detection system using ResNet50 to classify car images into six damage categories.
 
-**Technologies Used**
+**Technologies Used:**
 Python, PyTorch, Torchvision, ResNet50, Streamlit, Pillow (PIL)
 
-**Results**
+**Results:**
 
 * Achieved **~80% validation accuracy**.
 * Classified images into **6 damage categories**.
