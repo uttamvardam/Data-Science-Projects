@@ -3,7 +3,7 @@
 
 ### Project Overview
 
-This project develops an automated car damage detection system based on deep learning, designed to classify the condition of a vehicle’s front and rear into six predefined categories. The solution integrates a trained deep learning model with a Streamlit application, enabling fast, accurate, and user-friendly damage assessment. By automating the inspection process, the system helps VROOM Cars improve the efficiency, consistency, and reliability of vehicle evaluations while providing a scalable foundation for future enhancements.
+This project develops an automated vehicle damage detection system based on deep learning, designed to classify the condition of a vehicle’s front and rear into six predefined categories. The solution integrates a trained deep learning model with a Streamlit application, enabling fast, accurate, and user-friendly damage assessment. By automating the inspection process, the system helps VROOM Cars improve the efficiency, consistency, and reliability of vehicle evaluations while providing a scalable foundation for future enhancements.
 
 
 ### Business Problem
@@ -54,7 +54,7 @@ This project develops an automated car damage detection system based on deep lea
 - **Validation Accuracy:** ~80%
 
 ---
-## Installation
+### Installation
 
 Install the required dependencies:
 
@@ -63,7 +63,7 @@ pip install -r requirements.txt
 ```
 
 ---
-## Run the Application
+### Run the Application
 
 Start the Streamlit application:
 
@@ -84,7 +84,7 @@ The application will open in your default web browser.
 * **Pillow (PIL)** – Image processing library for loading and handling uploaded images.
 
 ---
-## Project Workflow
+### Project Workflow
 
 1. Upload a car image.
 2. The image is preprocessed.
@@ -92,7 +92,7 @@ The application will open in your default web browser.
 4. The predicted damage type is displayed on the screen.
 
 ---
-## Notes
+### Notes
 
 - Upload clear, high-quality images.
 - Best results are obtained with third-quarter front or rear views.
