@@ -22,7 +22,6 @@ Built a deep learning-based vehicle damage detection system using ResNet50 to cl
 Python, PyTorch, Torchvision, ResNet50, Streamlit, Pillow (PIL)
 
 **Results:**
-
 * Achieved **~80% validation accuracy**.
 * Classified images into **6 damage categories**.
 * Deployed as a **Streamlit web application** for real-time predictions.
