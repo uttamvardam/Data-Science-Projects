@@ -9,7 +9,7 @@ Health insurance premiums depend on several factors such as **age, BMI, smoking 
 
 Try the deployed Streamlit application here:
 
-**🌐 Live App:** https://your-streamlit-app.streamlit.app
+**🌐 Live App:** https://data-science-projects-na5mpwkrfqfmjmqsqbsxdv.streamlit.app/
 
 The application allows you to:
 
