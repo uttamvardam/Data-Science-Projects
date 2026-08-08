@@ -6,7 +6,7 @@ This repository showcases a collection of my data science projects, demonstratin
 
 # 🤖 Machine Learning
 
-- Credit Risk Prediction *(Coming Soon)*
+1. Credit Risk Prediction *(Coming Soon)*
 2. [Health Insurance Premium Prediction](https://github.com/uttamvardam/Data-Science-Projects/tree/main/Insurance-Premium-Prediction)
 
   **Description:**
