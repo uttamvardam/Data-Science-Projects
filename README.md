@@ -6,8 +6,22 @@ This repository showcases a collection of my data science projects, demonstratin
 
 # 🤖 Machine Learning
 
-- Credit Risk Prediction *(Coming Soon)*
-- Health Insurance Premium Prediction *(Coming Soon)*
+1. Credit Risk Prediction *(Coming Soon)*
+2. [Health Insurance Premium Prediction](https://github.com/uttamvardam/Data-Science-Projects/tree/main/Insurance-Premium-Prediction)
+
+ **Description:**
+* Predicted health insurance premiums using customer and health-related factors.
+* Built an end-to-end ML pipeline from preprocessing to deployment.
+
+**Technologies Used:**
+* Python, Pandas, NumPy, Scikit-learn
+* XGBoost, Joblib, Streamlit
+
+**Results:**
+* **98.87% R²** — Young Customers
+* **99.71% R²** — Older Customers
+* Deployed as a **real-time Streamlit app**
+
 
 ---
 
