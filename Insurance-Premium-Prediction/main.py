@@ -1,6 +1,10 @@
 import streamlit as st
 from prediction_helper import predict
 from PIL import Image
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent
+
 
 # -------------------------------------
 # Page Configuration
@@ -172,8 +176,7 @@ using Artificial Intelligence.
     st.markdown("##### ✅ Secure Information")
 
 with right:
-
-    image = Image.open("assets/insurance.png")
+    image = Image.open(BASE_DIR / "assets" / "insurance.png")
     st.image(image, use_container_width=True)
 
 st.divider()
