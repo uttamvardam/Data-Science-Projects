@@ -1,21 +1,22 @@
 import pandas as pd
 import joblib
+from pathlib import Path
 
-# ---------------------------------------------------
+BASE_DIR = Path(__file__).resolve().parent
+# --------------------------------------------------
 # Load Trained Models
-# ---------------------------------------------------
+# --------------------------------------------------
 
-model_young = joblib.load("artifacts/model_young.joblib")
-model_rest = joblib.load("artifacts/model_rest.joblib")
+model_young = joblib.load(BASE_DIR / "artifacts" / "model_young.joblib")
+model_rest = joblib.load(BASE_DIR / "artifacts" / "model_rest.joblib")
 
-# ---------------------------------------------------
+
+# --------------------------------------------------
 # Load Scalers
-# ---------------------------------------------------
+# --------------------------------------------------
 
-scaler_young = joblib.load("artifacts/scaler_young.joblib")
-scaler_rest = joblib.load("artifacts/scaler_rest.joblib")
-
-
+scaler_young = joblib.load(BASE_DIR / "artifacts" / "scaler_young.joblib")
+scaler_rest = joblib.load(BASE_DIR / "artifacts" / "scaler_rest.joblib")
 # ---------------------------------------------------
 # Medical Risk Score
 # ---------------------------------------------------
