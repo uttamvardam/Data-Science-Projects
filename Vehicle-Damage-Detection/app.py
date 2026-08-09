@@ -3,9 +3,7 @@ VROOM Cars — AI Vehicle Damage Detection
 A professional Streamlit dashboard powered by a fine-tuned ResNet50 model.
 """
 import os
-import time
 import streamlit as st
-from PIL import Image as PILImage
 from model_helper import predict
 
 # =====================================================
