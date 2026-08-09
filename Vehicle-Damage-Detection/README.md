@@ -25,7 +25,7 @@ The final solution uses **ResNet50 Transfer Learning** and integrates the traine
 
 ## 🚀 Live Demo
 
-👉 **[Try Vehicle Damage Detection App]([YOUR_STREAMLIT_APP_URL](https://data-science-projects-5c24mnpbf8v6ay5tel2ixn.streamlit.app/))**
+👉 [Try Vehicle Damage Detection App](https://data-science-projects-5c24mnpbf8v6ay5tel2ixn.streamlit.app/)
 
 > Upload a vehicle image and get an AI-powered damage classification.
 
