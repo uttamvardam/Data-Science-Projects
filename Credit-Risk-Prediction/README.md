@@ -4,7 +4,7 @@
 
 Try the Credit Risk Analysis application live:
 
-👉 **[Open Streamlit App](YOUR_STREAMLIT_APP_LINK)**
+👉 **[Open Streamlit App](https://data-science-projects-git-j5d4tkchpzplvudgcu7jva.streamlit.app/)**
 
 ---
 
