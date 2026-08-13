@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lauki Credit Score Bureau & Underwriting Intelligence</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f6ff',
+                            100: '#e0edff',
+                            200: '#bcd7ff',
+                            300: '#82b4ff',
+                            400: '#438eff',
+                            500: '#1d6ff2',
+                            600: '#1050cc',
+                            700: '#0e3ea1',
+                            800: '#113582',
+                            900: '#132f6b',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+        input[type="range"]::-webkit-slider-thumb {
+            box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.3);
+            transition: transform 0.1s ease;
+        }
+        input[type="range"]::-webkit-slider-thumb:active {
+            transform: scale(1.2);
+        }
+        #gauge-progress {
+            transition: stroke-dashoffset 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        @media print {
+            body {
+                background: white !important;
+                color: black !important;
+            }
+            .no-print {
+                display: none !important;
+            }
+            .print-only {
+                display: block !important;
+            }
+            .print-card {
+                box-shadow: none !important;
+                border: 1px solid #e2e8f0 !important;
+                break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans min-h-screen bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:16px_16px] antialiased">
+
+    <!-- Top Announcement Bar -->
+<div class="no-print bg-gradient-to-r from-brand-600 to-indigo-700 text-white py-2.5 px-4 text-center shadow-sm">
+    <div class="flex justify-center items-center gap-3">
+        <span class="bg-white/20 px-2.5 py-0.5 rounded text-[10px] uppercase font-bold tracking-wide">
+            SMART CREDIT ANALYSIS
+        </span>
+        <span class="text-xs font-semibold tracking-wide">
+            AI-Powered Credit Risk Assessment
+        </span>
+    </div>
+</div>
+
+    <!-- Navigation Header -->
+    <header class="bg-white/80 backdrop-blur-md border-b border-slate-100 sticky top-0 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between py-3">
+            <!-- UPGRADED LOGO & TEXT SIZES TO EXACTLY 40PX FOR ELITE LEGIBILITY -->
+            <div class="flex items-center gap-4">
+                <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-brand-600 to-indigo-600 flex items-center justify-center text-white shadow-lg shadow-brand-500/25">
+                    <i data-lucide="trending-up" class="w-7 h-7"></i>
+                </div>
+                <div>
+                    <div class="flex items-baseline gap-2">
+                        <span class="font-extrabold text-slate-900 tracking-tight leading-none" style="font-size: 40px !important;">Lauki</span>
+                        <span class="font-semibold text-brand-600 tracking-tight leading-none" style="font-size: 40px !important;">Finance</span>
+                    </div>
+                    <p class="text-[13px] font-bold text-slate-400 uppercase tracking-[0.18em] mt-1.5 leading-none">Credit Bureau</p>
+                </div>
+            </div>
+
+            <!-- Header Actions -->
+<div class="flex items-center gap-4">
+    <button onclick="window.print()" class="no-print flex items-center gap-1.5 text-sm font-semibold text-slate-700 hover:text-brand-600 bg-slate-100 hover:bg-slate-200/80 px-4 py-2 rounded-lg transition-all border border-slate-200/50">
+        <i data-lucide="printer" class="w-4 h-4"></i>
+        <span>Export Report</span>
+    </button>
+</div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12">
+
+        <!-- HERO SECTION: Title & Interactive Entry Form -->
+        <section class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+
+            <!-- Left Info Content -->
+            <div class="lg:col-span-5 space-y-6 pt-2">
+                <div class="inline-flex items-center gap-1.5 bg-brand-50 border border-brand-100 text-brand-700 rounded-full px-3 py-1 text-xs font-semibold">
+                    <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+                    Next-Gen Credit Intelligence Engine
+                </div>
+
+                <!-- DECREASED MAIN TITLE TEXT SIZE TO EXACTLY 25PX FOR PRECISE BRAND STYLING -->
+                <h1 class="font-extrabold text-slate-900 tracking-tight leading-snug" style="font-size: 25px !important;">
+                    Check Your Free <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-600 to-indigo-600" style="font-size: 25px !important;">Credit Score</span> & Report
+                </h1>
+
+                <p class="text-slate-600 text-sm leading-relaxed max-w-xl">
+                    Get deep credit diagnostics powered by the <strong>Lauki Finance ML Engine</strong>. View personalized offers, understand your risk profile, and simulate improvements in real time.
+                </p>
+
+                <!-- Value Props -->
+                <div class="space-y-4">
+                    <div class="flex items-start gap-3">
+                        <div class="p-1 rounded-lg bg-emerald-100 text-emerald-700 mt-0.5 shadow-sm">
+                            <i data-lucide="check" class="w-4 h-4 stroke-[3]"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-800 text-sm">Detailed Credit Diagnostics</h4>
+                            <p class="text-slate-500 text-xs">Analyze debt, utilization, payment history, and mix patterns.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-3">
+                        <div class="p-1 rounded-lg bg-emerald-100 text-emerald-700 mt-0.5 shadow-sm">
+                            <i data-lucide="check" class="w-4 h-4 stroke-[3]"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-800 text-sm">No Impact on Score (Soft Pull)</h4>
+                            <p class="text-slate-500 text-xs">Simulate variations without dropping your official credit file score.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-3">
+                        <div class="p-1 rounded-lg bg-emerald-100 text-emerald-700 mt-0.5 shadow-sm">
+                            <i data-lucide="check" class="w-4 h-4 stroke-[3]"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-800 text-sm">Instant Personalized Loan Offers</h4>
+                            <p class="text-slate-500 text-xs">Pre-approved opportunities customized specifically to your risk tier.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-3">
+                        <div class="p-1 rounded-lg bg-sky-100 text-sky-700 mt-0.5 shadow-sm">
+                            <i data-lucide="shield-check" class="w-4 h-4 stroke-[3]"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-800 text-sm">Safe, Secure & 100% Confidential</h4>
+                            <p class="text-slate-500 text-xs">Full privacy protection under secure local sandbox processing.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4-Tier Scale Cards -->
+                <div style="margin-top: 2rem;">
+                    <p style="font-size: 11px; font-weight: 800; color: #64748b; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.75rem;">Credit Score Bureau Scales</p>
+                    <div class="grid grid-cols-4 gap-2">
+                        <!-- POOR box -->
+                        <div class="bg-red-50 border border-red-200 rounded-xl py-3 text-center">
+                            <div class="text-[9px] font-bold text-red-600 tracking-wider">POOR</div>
+                            <div class="text-[13px] font-extrabold text-red-950 inline-flex items-center gap-1">
+                                300-500
+                                <span class="text-[9px] color-[#e74c3c] border border-red-200 rounded-full w-3.5 h-3.5 inline-flex items-center justify-center font-bold">i</span>
+                            </div>
+                        </div>
+                        <!-- AVERAGE box -->
+                        <div class="bg-amber-50 border border-amber-200 rounded-xl py-3 text-center">
+                            <div class="text-[9px] font-bold text-amber-600 tracking-wider">AVERAGE</div>
+                            <div class="text-[13px] font-extrabold text-amber-950 inline-flex items-center gap-1">
+                                500-650
+                                <span class="text-[9px] color-[#f39c12] border border-amber-200 rounded-full w-3.5 h-3.5 inline-flex items-center justify-center font-bold">i</span>
+                            </div>
+                        </div>
+                        <!-- GOOD box -->
+                        <div class="bg-blue-50 border border-blue-200 rounded-xl py-3 text-center">
+                            <div class="text-[9px] font-bold text-blue-600 tracking-wider">GOOD</div>
+                            <div class="text-[13px] font-extrabold text-blue-950 inline-flex items-center gap-1">
+                                650-750
+                                <span class="text-[9px] color-[#3498db] border border-blue-200 rounded-full w-3.5 h-3.5 inline-flex items-center justify-center font-bold">i</span>
+                            </div>
+                        </div>
+                        <!-- EXCELLENT box -->
+                        <div class="bg-emerald-50 border border-emerald-200 rounded-xl py-3 text-center">
+                            <div class="text-[9px] font-bold text-emerald-600 tracking-wider">EXCELLENT</div>
+                            <div class="text-[13px] font-extrabold text-emerald-950 inline-flex items-center gap-1">
+                                750-900
+                                <span class="text-[9px] color-[#2ecc71] border border-emerald-200 rounded-full w-3.5 h-3.5 inline-flex items-center justify-center font-bold">i</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Custom Form Card -->
+            <div class="no-print lg:col-span-7 bg-white rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100 p-8 space-y-6 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-brand-50 rounded-full blur-2xl -z-10 opacity-70"></div>
+
+                <div class="flex items-center justify-between border-b border-slate-100 pb-4">
+                    <div>
+                        <h3 class="text-xl font-extrabold text-slate-850">Enter Details</h3>
+                        <p class="text-xs text-slate-400 mt-0.5">Continuous scoring calculates dynamically on input adjustment</p>
+                    </div>
+                    <span class="flex items-center gap-1 bg-brand-50 text-brand-700 text-xs font-bold px-3 py-1 rounded-full">
+                        <i data-lucide="sliders" class="w-3.5 h-3.5"></i>
+                        Live Simulator
+                    </span>
+                </div>
+
+                <!-- Form Inputs -->
+                <div class="space-y-6">
+                    <!-- Applicant Profile -->
+                    <div class="space-y-4">
+                        <p class="text-[10px] font-bold text-brand-600 uppercase tracking-widest">👤 Applicant Profile</p>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Age</label>
+                                <div class="flex items-center border border-slate-200 rounded-xl overflow-hidden bg-slate-50/50 focus-within:border-brand-500 focus-within:ring-1 focus-within:ring-brand-500 focus-within:bg-white transition-all">
+                                    <button type="button" onclick="stepInput('input-age', -1)" class="px-3 py-2 bg-slate-100 hover:bg-slate-200/80 text-slate-600 font-bold border-r border-slate-200 transition-all">-</button>
+                                    <input type="number" id="input-age" value="28" min="18" max="100" class="w-full text-center bg-transparent border-0 focus:ring-0 text-slate-800 font-bold py-2 outline-none text-sm">
+                                    <button type="button" onclick="stepInput('input-age', 1)" class="px-3 py-2 bg-slate-100 hover:bg-slate-200/80 text-slate-600 font-bold border-l border-slate-200 transition-all">+</button>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Residence Type</label>
+                                <select id="input-residence" class="w-full border border-slate-200 rounded-xl px-3 py-2 bg-slate-50/50 focus:border-brand-500 focus:ring-1 focus:ring-brand-500 focus:bg-white text-slate-800 font-bold text-sm outline-none transition-all">
+                                    <option value="Rented" selected>Rented</option>
+                                    <option value="Owned">Owned</option>
+                                    <option value="Mortgaged">Mortgaged</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Open Accounts</label>
+                                <div class="flex items-center border border-slate-200 rounded-xl overflow-hidden bg-slate-50/50 focus-within:border-brand-500 focus-within:ring-1 focus-within:ring-brand-500 focus-within:bg-white transition-all">
+                                    <button type="button" onclick="stepInput('input-accounts', -1)" class="px-3 py-2 bg-slate-100 hover:bg-slate-200/80 text-slate-600 font-bold border-r border-slate-200 transition-all">-</button>
+                                    <input type="number" id="input-accounts" value="1" min="0" max="50" class="w-full text-center bg-transparent border-0 focus:ring-0 text-slate-800 font-bold py-2 outline-none text-sm">
+                                    <button type="button" onclick="stepInput('input-accounts', 1)" class="px-3 py-2 bg-slate-100 hover:bg-slate-200/80 text-slate-600 font-bold border-l border-slate-200 transition-all">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Financial Capacity -->
+                    <div class="space-y-4">
+                        <p class="text-[10px] font-bold text-brand-600 uppercase tracking-widest">💼 Financial & Capacity</p>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <!-- Annual Income -->
+                            <div>
+                                <div class="flex justify-between items-center mb-1">
+                                    <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider">Annual Income (₹)</label>
+                                    <span class="text-[10px] font-bold text-brand-600 bg-brand-50 px-1.5 py-0.5 rounded" id="annual-income-badge">₹ 12,000,000</span>
+                                </div>
+                                <div class="flex items-center border border-slate-200 rounded-xl overflow-hidden bg-slate-50/50 focus-within:border-brand-500 focus-within:ring-1 focus-within:ring-brand-500 focus-within:bg-white transition-all">
+                                    <button type="button" onclick="stepInput('input-annual-income', -100000)" class="px-3 py-2 bg-slate-100 hover:bg-slate-200/80 text-slate-600 font-bold border-r border-slate-200 transition-all">-</button>
+                                    <input type="number" id="input-annual-income" value="12000000" min="50000" max="100000000" step="100000" class="w-full text-center bg-transparent border-0 focus:ring-0 text-slate-800 font-bold py-2 outline-none text-sm">
+                                    <button type="button" onclick="stepInput('input-annual-income', 100000)" class="px-3 py-2 bg-slate-100 hover:bg-slate-200/80 text-slate-600 font-bold border-l border-slate-200 transition-all">+</button>
+                                </div>
+                            </div>
+                            <!-- Loan Amount -->
+                            <div>
+                                <div class="flex justify-between items-center mb-1">
+                                    <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider">Loan Amount (₹)</label>
+                                    <span class="text-[10px] font-bold text-brand-600 bg-brand-50 px-1.5 py-0.5 rounded" id="loan-amount-badge">₹ 2,560,000</span>
+                                </div>
+                                <div class="flex items-center border border-slate-200 rounded-xl overflow-hidden bg-slate-50/50 focus-within:border-brand-500 focus-within:ring-1 focus-within:ring-brand-500 focus-within:bg-white transition-all">
+                                    <button type="button" onclick="stepInput('input-loan-amount', -50000)" class="px-3 py-2 bg-slate-100 hover:bg-slate-200/80 text-slate-600 font-bold border-r border-slate-200 transition-all">-</button>
+                                    <input type="number" id="input-loan-amount" value="2560000" min="10000" max="50000000" step="50000" class="w-full text-center bg-transparent border-0 focus:ring-0 text-slate-800 font-bold py-2 outline-none text-sm">
+                                    <button type="button" onclick="stepInput('input-loan-amount', 50000)" class="px-3 py-2 bg-slate-100 hover:bg-slate-200/80 text-slate-600 font-bold border-l border-slate-200 transition-all">+</button>
+                                </div>
+                            </div>
+                            <!-- Loan to Income Ratio -->
+                            <div>
+                                <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Loan to Income Ratio</label>
+                                <div class="flex items-center border border-slate-200 rounded-xl bg-slate-50 px-4 h-[38px] min-h-[38px] shadow-inner select-none">
+                                    <span class="text-sm font-extrabold text-brand-600" id="input-lti-ratio-badge">0.21x</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Tenure (Months)</label>
+                                <div class="flex items-center border border-slate-200 rounded-xl overflow-hidden bg-slate-50/50 focus-within:border-brand-500 focus-within:ring-1 focus-within:ring-brand-500 focus-within:bg-white transition-all">
+                                    <button type="button" onclick="stepInput('input-tenure', -6)" class="px-3 py-2 bg-slate-100 hover:bg-slate-200/80 text-slate-600 font-bold border-r border-slate-200 transition-all">-</button>
+                                    <input type="number" id="input-tenure" value="36" min="6" max="360" step="6" class="w-full text-center bg-transparent border-0 focus:ring-0 text-slate-800 font-bold py-2 outline-none text-sm">
+                                    <button type="button" onclick="stepInput('input-tenure', 6)" class="px-3 py-2 bg-slate-100 hover:bg-slate-200/80 text-slate-600 font-bold border-l border-slate-200 transition-all">+</button>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Loan Purpose</label>
+                                <select id="input-purpose" class="w-full border border-slate-200 rounded-xl px-3 py-2 bg-slate-50/50 focus:border-brand-500 focus:ring-1 focus:ring-brand-500 focus:bg-white text-slate-800 font-bold text-sm outline-none transition-all">
+                                    <option value="Home" selected>Home</option>
+                                    <option value="Personal">Personal</option>
+                                    <option value="Auto">Auto</option>
+                                    <option value="Business">Business</option>
+                                    <option value="Education">Education</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Loan Type</label>
+                                <select id="input-loan-type" class="w-full border border-slate-200 rounded-xl px-3 py-2 bg-slate-50/50 focus:border-brand-500 focus:ring-1 focus:ring-brand-500 focus:bg-white text-slate-800 font-bold text-sm outline-none transition-all">
+                                    <option value="Unsecured" selected>Unsecured</option>
+                                    <option value="Secured">Secured</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- History and Risk -->
+                    <div class="space-y-4">
+                        <p class="text-[10px] font-bold text-brand-600 uppercase tracking-widest">📊 Debt & Risk History</p>
+                        <div class="bg-slate-50/50 border border-slate-100 p-4 rounded-xl space-y-2">
+                            <div class="flex justify-between items-center">
+                                <label class="text-xs font-bold text-slate-500 uppercase tracking-wider">Credit Utilization (%)</label>
+                                <span class="text-xs font-bold px-2 py-0.5 rounded bg-brand-50 text-brand-600 border border-brand-100" id="utilization-badge">90%</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <input type="range" id="input-utilization-slider" min="0" max="100" value="90" class="w-full accent-brand-500 h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer">
+                                <input type="number" id="input-utilization" min="0" max="100" value="90" class="hidden">
+                            </div>
+                        </div>
+                        <div class="bg-slate-50/50 border border-slate-100 p-4 rounded-xl space-y-2">
+                            <div class="flex justify-between items-center">
+                                <label class="text-xs font-bold text-slate-500 uppercase tracking-wider">Avg DPD (Days Past Due)</label>
+                                <span class="text-xs font-bold px-2 py-0.5 rounded bg-amber-50 text-amber-600 border border-amber-100" id="dpd-badge">20 days</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <input type="range" id="input-dpd-slider" min="0" max="180" value="20" class="w-full accent-brand-500 h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer">
+                                <input type="number" id="input-dpd" min="0" max="180" value="20" class="hidden">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="pt-4 border-t border-slate-100 flex items-center justify-between gap-4">
+                    <p class="text-xs text-slate-400 flex items-center gap-1 font-medium">
+                        <i data-lucide="shield" class="w-3.5 h-3.5"></i>
+                        No credit score impact (Soft pull)
+                    </p>
+                    <a href="#score-dashboard" class="flex-1 md:flex-initial text-center bg-gradient-to-r from-brand-600 to-indigo-600 hover:from-brand-700 hover:to-indigo-700 text-white font-bold px-8 py-3.5 rounded-xl shadow-lg shadow-brand-500/20 hover:shadow-brand-500/30 hover:scale-[1.01] transition-all text-sm">
+                        Get Free Credit Report
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCORE SECTION -->
+        <section id="score-dashboard" class="bg-white rounded-3xl border border-slate-100 shadow-xl shadow-slate-100/50 p-6 sm:p-8 space-y-8 scroll-mt-20">
+            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-slate-100 pb-5">
+                <div>
+                    <h2 class="text-2xl font-extrabold text-slate-900 tracking-tight">Your Lauki Credit Score</h2>
+                    <p class="text-xs text-slate-500 mt-1">Real-time calculations powered by financial machine learning models</p>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></span>
+                    <span class="text-xs font-bold text-emerald-600 uppercase tracking-widest bg-emerald-50 px-3 py-1 rounded-full border border-emerald-100">Live Computed</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                <!-- Gauge -->
+                <div class="md:col-span-5 flex flex-col items-center justify-center space-y-4">
+                    <div class="relative w-72 h-44 flex items-center justify-center">
+                        <svg class="w-full h-full" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="gaugeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" stop-color="#e74c3c" />
+                                    <stop offset="33.3%" stop-color="#e74c3c" />
+                                    <stop offset="33.4%" stop-color="#f39c12" />
+                                    <stop offset="58.3%" stop-color="#f39c12" />
+                                    <stop offset="58.4%" stop-color="#3498db" />
+                                    <stop offset="75.0%" stop-color="#3498db" />
+                                    <stop offset="75.1%" stop-color="#2ecc71" />
+                                    <stop offset="100%" stop-color="#2ecc71" />
+                                </linearGradient>
+                            </defs>
+                            <path d="M 25 90 A 75 75 0 0 1 175 90" fill="none" stroke="#f1f5f9" stroke-width="12" stroke-linecap="round"/>
+                            <path id="gauge-progress" d="M 25 90 A 75 75 0 0 1 175 90" fill="none" stroke="url(#gaugeGradient)" stroke-width="12" stroke-linecap="round" stroke-dasharray="235.6" stroke-dashoffset="150"/>
+                        </svg>
+                        <div class="absolute bottom-2 inset-x-0 text-center flex flex-col justify-end items-center h-20">
+                            <span class="text-5xl font-extrabold text-slate-800 tracking-tight leading-none" id="score-value">456</span>
+                            <span class="text-xs font-bold text-slate-400 mt-2 tracking-widest uppercase" id="score-rating-text">Poor</span>
+                        </div>
+                    </div>
+                    <div class="w-full max-w-[280px] flex justify-between text-[11px] font-bold text-slate-400 px-3">
+                        <span class="text-[#e74c3c]">300 (Poor)</span>
+                        <span class="text-[#2ecc71]">900 (Excellent)</span>
+                    </div>
+                </div>
+
+                <!-- Status Card -->
+                <div class="md:col-span-7 space-y-6">
+                    <div class="border border-slate-100 rounded-2xl p-6 bg-gradient-to-b from-slate-50 to-white shadow-sm relative">
+                        <div class="space-y-3 relative">
+                            <h3 id="status-title" class="text-2xl font-black text-[#e74c3c] tracking-tight">Status: Poor</h3>
+                            <p id="pd-value" class="text-sm font-bold text-slate-700 tracking-wide bg-slate-100/80 px-3 py-1 rounded-lg inline-block">Probability of Default: 74.00%</p>
+                            <hr class="border-slate-100 my-4">
+                            <p id="score-evaluation-summary" class="text-slate-500 text-sm leading-relaxed">
+                                Your score of 456 is evaluated based on 1 open accounts, your credit utilization of 90%, and your average DPD of 20 days.
+                            </p>
+                            <div id="advice-box" class="p-4 rounded-xl border border-red-200 bg-red-50 text-[#e74c3c] text-sm font-medium mt-4 flex items-start gap-2.5 shadow-sm">
+                                <i data-lucide="info" class="w-5 h-5 flex-shrink-0 mt-0.5 text-[#e74c3c]"></i>
+                                <span>Work on reducing your credit utilization and paying on time to improve your score.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Diagnostics -->
+            <div class="border-t border-slate-100 pt-8">
+                <h3 class="text-lg font-bold text-slate-800 mb-6 flex items-center gap-2">
+                    <i data-lucide="activity" class="w-5 h-5 text-brand-500"></i>
+                    How Your Inputs Affect Your Credit Health
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Factor 1 -->
+                    <div class="border border-slate-100 bg-slate-50/50 rounded-xl p-4.5 space-y-3">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-sm">Payment History</h4>
+                                <p class="text-[10px] text-slate-400 font-medium">35% Weight</p>
+                            </div>
+                            <span id="factor-pay-history-badge" class="text-[10px] font-bold px-2 py-0.5 rounded bg-amber-50 text-amber-600 border border-amber-100">Fair</span>
+                        </div>
+                        <div class="h-2 w-full bg-slate-100 rounded-full overflow-hidden">
+                            <div id="factor-pay-history-progress" class="h-full bg-[#f39c12] rounded-full" style="width: 50%"></div>
+                        </div>
+                        <p id="factor-pay-history-desc" class="text-[11px] text-slate-500 leading-normal">
+                            20 DPD indicates delayed payments. On-time behavior is vital.
+                        </p>
+                    </div>
+                    <!-- Factor 2 -->
+                    <div class="border border-slate-100 bg-slate-50/50 rounded-xl p-4.5 space-y-3">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-sm">Credit Utilization</h4>
+                                <p class="text-[10px] text-slate-400 font-medium">30% Weight</p>
+                            </div>
+                            <span id="factor-util-badge" class="text-[10px] font-bold px-2 py-0.5 rounded bg-red-50 text-red-600 border border-red-100">Poor</span>
+                        </div>
+                        <div class="h-2 w-full bg-slate-100 rounded-full overflow-hidden">
+                            <div id="factor-util-progress" class="h-full bg-[#e74c3c] rounded-full" style="width: 20%"></div>
+                        </div>
+                        <p id="factor-util-desc" class="text-[11px] text-slate-500 leading-normal">
+                            90% utilization is excessive. High risk signal.
+                        </p>
+                    </div>
+                    <!-- Factor 3 -->
+                    <div class="border border-slate-100 bg-slate-50/50 rounded-xl p-4.5 space-y-3">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-sm">Credit Age & Mix</h4>
+                                <p class="text-[10px] text-slate-400 font-medium">15% Weight</p>
+                            </div>
+                            <span id="factor-mix-badge" class="text-[10px] font-bold px-2 py-0.5 rounded bg-blue-50 text-blue-600 border border-blue-100">Good</span>
+                        </div>
+                        <div class="h-2 w-full bg-slate-100 rounded-full overflow-hidden">
+                            <div id="factor-mix-progress" class="h-full bg-[#3498db] rounded-full" style="width: 70%"></div>
+                        </div>
+                        <p id="factor-mix-desc" class="text-[11px] text-slate-500 leading-normal">
+                            1 open account provides history.
+                        </p>
+                    </div>
+                    <!-- Factor 4 (Upgraded to Loan to Income Ratio) -->
+                    <div class="border border-slate-100 bg-slate-50/50 rounded-xl p-4.5 space-y-3">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-sm">Loan to Income Ratio</h4>
+                                <p class="text-[10px] text-slate-400 font-medium">20% Weight</p>
+                            </div>
+                            <span id="factor-dti-badge" class="text-[10px] font-bold px-2 py-0.5 rounded bg-blue-50 text-blue-600 border border-blue-100">Good</span>
+                        </div>
+                        <div class="h-2 w-full bg-slate-100 rounded-full overflow-hidden">
+                            <div id="factor-dti-progress" class="h-full bg-[#3498db] rounded-full" style="width: 80%"></div>
+                        </div>
+                        <p id="factor-dti-desc" class="text-[11px] text-slate-500 leading-normal">
+                            LTI ratio is safe and moderate.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Simulator -->
+        <section class="no-print bg-gradient-to-b from-slate-900 to-indigo-950 text-white rounded-3xl p-6 sm:p-8 space-y-6 shadow-xl relative overflow-hidden">
+            <div class="flex items-center justify-between border-b border-white/10 pb-4 relative z-10">
+                <div>
+                    <h3 class="text-xl font-bold tracking-tight">Interactive Score Improvement Simulator</h3>
+                    <p class="text-xs text-slate-400 mt-1">See how taking proactive control of your credit values changes your score!</p>
+                </div>
+                <div class="bg-white/10 px-3 py-1 rounded-full text-xs font-semibold flex items-center gap-1">
+                    <i data-lucide="zap" class="w-3.5 h-3.5 text-yellow-400"></i>
+                    What-If Analytics
+                </div>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="space-y-2">
+                        <div class="flex justify-between text-sm">
+                            <span class="font-semibold text-slate-200">Simulate New Credit Card Utilization</span>
+                            <span class="font-extrabold text-brand-400 bg-brand-500/15 px-2 py-0.5 rounded" id="sim-util-badge">30%</span>
+                        </div>
+                        <input type="range" id="sim-util-slider" min="0" max="100" value="30" class="w-full accent-brand-500 h-2 bg-white/10 rounded-lg appearance-none cursor-pointer">
+                    </div>
+                    <div class="space-y-2">
+                        <div class="flex justify-between text-sm">
+                            <span class="font-semibold text-slate-200">Simulate Days Past Due (DPD)</span>
+                            <span class="font-extrabold text-emerald-400 bg-emerald-500/15 px-2 py-0.5 rounded" id="sim-dpd-badge">0 days</span>
+                        </div>
+                        <input type="range" id="sim-dpd-slider" min="0" max="180" value="0" class="w-full accent-emerald-500 h-2 bg-white/10 rounded-lg appearance-none cursor-pointer">
+                    </div>
+                </div>
+                <div class="lg:col-span-5 bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col justify-between items-center text-center space-y-4">
+                    <div>
+                        <h4 class="text-sm font-bold text-slate-300">Simulated Score</h4>
+                    </div>
+                    <div class="flex items-center gap-6">
+                        <div>
+                            <span class="block text-xs text-slate-400">Current</span>
+                            <span class="block text-2xl font-black text-red-400 mt-1" id="sim-current-val">456</span>
+                        </div>
+                        <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-brand-400">
+                            <i data-lucide="arrow-right" class="w-5 h-5 animate-pulse"></i>
+                        </div>
+                        <div>
+                            <span class="block text-xs text-slate-300">Simulated</span>
+                            <span class="block text-4xl font-black text-emerald-400 mt-0.5" id="sim-potential-val">681</span>
+                        </div>
+                    </div>
+                    <div class="w-full pt-4 border-t border-white/10">
+                        <div class="text-xs text-emerald-400 font-extrabold bg-emerald-500/10 border border-emerald-500/20 py-2 px-4 rounded-xl inline-flex items-center gap-1">
+                            <i data-lucide="sparkles" class="w-4 h-4"></i>
+                            Rating Boost: +<span id="sim-diff-val">225</span> points!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY IMPORTANT -->
+        <section class="space-y-6">
+            <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight text-center">Why is your Credit Score important?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white rounded-2xl border border-slate-200/60 p-6 space-y-4 hover:shadow-xl transition-all duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center shadow-inner">
+                        <i data-lucide="home" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-800 text-lg">Loan Approvals</h4>
+                    <p class="text-slate-500 text-xs leading-relaxed">A score of 750+ ensures instant approvals for personal, vehicle, and home loans.</p>
+                </div>
+                <div class="bg-white rounded-2xl border border-slate-200/60 p-6 space-y-4 hover:shadow-xl transition-all duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shadow-inner">
+                        <i data-lucide="percent" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-800 text-lg">Lower Interest Rates</h4>
+                    <p class="text-slate-500 text-xs leading-relaxed">Banks offer their lowest prime interest rates to customers with Excellent scores.</p>
+                </div>
+                <div class="bg-white rounded-2xl border border-slate-200/60 p-6 space-y-4 hover:shadow-xl transition-all duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center shadow-inner">
+                        <i data-lucide="credit-card" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-800 text-lg">Higher Credit Limits</h4>
+                    <p class="text-slate-500 text-xs leading-relaxed">A strong profile allows you to unlock high-limit, premium cards with exceptional reward points.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Offers -->
+        <section class="no-print bg-slate-100 rounded-3xl p-6 sm:p-8 space-y-6">
+            <h3 class="text-xl font-extrabold text-slate-900">Your Pre-Approved Loan & Card Offers</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="offers-grid"></div>
+        </section>
+
+    </main>
+
+    <footer class="bg-slate-900 text-slate-500 mt-20 border-t border-slate-800/80 py-8 text-center text-xs">
+        © 2026 Lauki Finance Credit Bureau | Terms & Conditions Apply
+    </footer>
+
+    <script>
+        function stepInput(id, delta) {
+            const el = document.getElementById(id);
+            const min = parseInt(el.min) || 0;
+            const max = parseInt(el.max) || Infinity;
+            const step = parseInt(el.step) || 1;
+            let val = (parseFloat(el.value) || 0) + (delta * step);
+            if (val < min) val = min;
+            if (val > max) val = max;
+            el.value = val;
+            el.dispatchEvent(new Event('input'));
+        }
+
+        function animateValue(obj, start, end, duration) {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                const current = Math.floor(progress * (end - start) + start);
+                obj.innerText = current;
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                } else {
+                    obj.innerText = end;
+                }
+            };
+            window.requestAnimationFrame(step);
+        }
+
+        function updateOffers(score) {
+            const offersGrid = document.getElementById('offers-grid');
+            let cardsHTML = '';
+
+            if (score >= 751) {
+                cardsHTML = `
+                    <div class="bg-white rounded-2xl border p-5 space-y-4">
+                        <h4 class="font-bold text-slate-800 text-sm">Lauki Premium Home Loan</h4>
+                        <p class="text-xs text-slate-500">Rate: 8.10% p.a. | Pre-Approved Limit: ₹ 1.5 Crores</p>
+                    </div>
+                    <div class="bg-white rounded-2xl border p-5 space-y-4">
+                        <h4 class="font-bold text-slate-800 text-sm">Lauki Sapphire Credit Card</h4>
+                        <p class="text-xs text-slate-500">Pre-Approved Limit: ₹ 500,000 | Fee: Waived</p>
+                    </div>
+                `;
+            } else if (score >= 651) {
+                cardsHTML = `
+                    <div class="bg-white rounded-2xl border p-5 space-y-4">
+                        <h4 class="font-bold text-slate-800 text-sm">Lauki Smart Home Loan</h4>
+                        <p class="text-xs text-slate-500">Rate: 8.65% p.a. | Pre-Approved Limit: ₹ 75 Lakhs</p>
+                    </div>
+                    <div class="bg-white rounded-2xl border p-5 space-y-4">
+                        <h4 class="font-bold text-slate-800 text-sm">Lauki Platinum Credit Card</h4>
+                        <p class="text-xs text-slate-500">Pre-Approved Limit: ₹ 150,000 | Fee: ₹499/yr</p>
+                    </div>
+                `;
+            } else if (score >= 501) {
+                cardsHTML = `
+                    <div class="bg-white rounded-2xl border p-5 space-y-4">
+                        <h4 class="font-bold text-slate-800 text-sm">Lauki Balance Transfer Loan</h4>
+                        <p class="text-xs text-slate-500">Consolidate debt at 11.5% APR | Chance: High</p>
+                    </div>
+                    <div class="bg-white rounded-2xl border p-5 space-y-4">
+                        <h4 class="font-bold text-slate-800 text-sm">Lauki Secured Credit Card</h4>
+                        <p class="text-xs text-slate-500">Deposit: ₹ 25,000 (Refundable) | No hard pull</p>
+                    </div>
+                `;
+            } else {
+                cardsHTML = `
+                    <div class="bg-white rounded-2xl border p-5 space-y-4">
+                        <h4 class="font-bold text-slate-800 text-sm">Lauki Credit Builder Account</h4>
+                        <p class="text-xs text-slate-500">Save ₹5,000/mo while reporting standard payments.</p>
+                    </div>
+                    <div class="bg-white rounded-2xl border p-5 space-y-4">
+                        <h4 class="font-bold text-slate-800 text-sm">Lauki Secured Card</h4>
+                        <p class="text-xs text-slate-500">Deposit: ₹10,000 | 100% approval rate to rebuild score.</p>
+                    </div>
+                `;
+            }
+            offersGrid.innerHTML = cardsHTML;
+            lucide.createIcons();
+        }
+
+        function updateFactors(score, avgDpd, utilization, openAccounts, loanAmount, annualIncome) {
+            // Factor 1: Payment History
+            const fPayBadge = document.getElementById('factor-pay-history-badge');
+            const fPayProg = document.getElementById('factor-pay-history-progress');
+            const fPayDesc = document.getElementById('factor-pay-history-desc');
+
+            if (avgDpd === 0) {
+                fPayBadge.innerText = 'Excellent';
+                fPayBadge.className = 'text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-50 text-emerald-600 border border-emerald-100';
+                fPayProg.className = 'h-full bg-[#2ecc71] rounded-full transition-all duration-1000';
+                fPayProg.style.width = '100%';
+                fPayDesc.innerText = '0 DPD indicates a flawless repayment history with no outstanding payment delays.';
+            } else if (avgDpd <= 10) {
+                fPayBadge.innerText = 'Good';
+                fPayBadge.className = 'text-[10px] font-bold px-2 py-0.5 rounded bg-blue-50 text-blue-600 border border-blue-100';
+                fPayProg.className = 'h-full bg-[#3498db] rounded-full transition-all duration-1000';
+                fPayProg.style.width = '75%';
+                fPayDesc.innerText = `${avgDpd} days average DPD is moderate. Clear them immediately to keep payments flawless.`;
+            } else if (avgDpd <= 30) {
+                fPayBadge.innerText = 'Fair';
+                fPayBadge.className = 'text-[10px] font-bold px-2 py-0.5 rounded bg-amber-50 text-amber-600 border border-amber-100';
+                fPayProg.className = 'h-full bg-[#f39c12] rounded-full transition-all duration-1000';
+                fPayProg.style.width = '50%';
+                fPayDesc.innerText = `${avgDpd} days average DPD is starting to represent serious risk to underwriting teams.`;
+            } else {
+                fPayBadge.innerText = 'Poor';
+                fPayBadge.className = 'text-[10px] font-bold px-2 py-0.5 rounded bg-red-50 text-red-600 border border-red-100';
+                fPayProg.className = 'h-full bg-[#e74c3c] rounded-full transition-all duration-1000';
+                fPayProg.style.width = '20%';
+                fPayDesc.innerText = `${avgDpd} days DPD is critical and represents extreme financial risk. Credit-building programs advised.`;
+            }
+
+            // Factor 2: Credit Utilization
+            const fUtilBadge = document.getElementById('factor-util-badge');
+            const fUtilProg = document.getElementById('factor-util-progress');
+            const fUtilDesc = document.getElementById('factor-util-desc');
+
+            if (utilization <= 30) {
+                fUtilBadge.innerText = 'Excellent';
+                fUtilBadge.className = 'text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-50 text-emerald-600 border border-emerald-100';
+                fUtilProg.className = 'h-full bg-[#2ecc71] rounded-full transition-all duration-1000';
+                fUtilProg.style.width = '100%';
+                fUtilDesc.innerText = `With ${utilization}% utilization, you operate safely within credit limits. High scoring boost.`;
+            } else if (utilization <= 50) {
+                fUtilBadge.innerText = 'Good';
+                fUtilBadge.className = 'text-[10px] font-bold px-2 py-0.5 rounded bg-blue-50 text-blue-600 border border-blue-100';
+                fUtilProg.className = 'h-full bg-[#3498db] rounded-full transition-all duration-1000';
+                fUtilProg.style.width = '75%';
+                fUtilDesc.innerText = `With ${utilization}% utilization, you keep balances moderate. Close to premium score levels.`;
+            } else if (utilization <= 70) {
+                fUtilBadge.innerText = 'Fair';
+                fUtilBadge.className = 'text-[10px] font-bold px-2 py-0.5 rounded bg-amber-50 text-amber-600 border border-amber-100';
+                fUtilProg.className = 'h-full bg-[#f39c12] rounded-full transition-all duration-1000';
+                fUtilProg.style.width = '50%';
+                fUtilDesc.innerText = `Your utilization of ${utilization}% is elevated. Lower total balances below 30% to maximize score.`;
+            } else {
+                fUtilBadge.innerText = 'Poor';
+                fUtilBadge.className = 'text-[10px] font-bold px-2 py-0.5 rounded bg-red-50 text-red-600 border border-red-100';
+                fUtilProg.className = 'h-full bg-[#e74c3c] rounded-full transition-all duration-1000';
+                fUtilProg.style.width = '20%';
+                fUtilDesc.innerText = `Excessive credit usage (${utilization}%) signals high dependency on credit limits and limits approvals.`;
+            }
+
+            // Factor 3: Credit Mix & Accounts
+            const fMixBadge = document.getElementById('factor-mix-badge');
+            const fMixProg = document.getElementById('factor-mix-progress');
+            const fMixDesc = document.getElementById('factor-mix-desc');
+
+            if (openAccounts === 0) {
+                fMixBadge.innerText = 'Poor';
+                fMixBadge.className = 'text-[10px] font-bold px-2 py-0.5 rounded bg-red-50 text-red-600 border border-red-100';
+                fMixProg.className = 'h-full bg-[#e74c3c] rounded-full transition-all duration-1000';
+                fMixProg.style.width = '10%';
+                fMixDesc.innerText = '0 open accounts represents a lack of credit history. Lenders cannot evaluate behavior.';
+            } else if (openAccounts <= 2) {
+                fMixBadge.innerText = 'Good';
+                fMixBadge.className = 'text-[10px] font-bold px-2 py-0.5 rounded bg-blue-50 text-blue-600 border border-blue-100';
+                fMixProg.className = 'h-full bg-[#3498db] rounded-full transition-all duration-1000';
+                fMixProg.style.width = '65%';
+                fMixDesc.innerText = `${openAccounts} open account provides some history. Adding a mix of secured/unsecured loans will build depth.`;
+            } else if (openAccounts <= 6) {
+                fMixBadge.innerText = 'Excellent';
+                fMixBadge.className = 'text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-50 text-emerald-600 border border-emerald-100';
+                fMixProg.className = 'h-full bg-[#2ecc71] rounded-full transition-all duration-1000';
+                fMixProg.style.width = '100%';
+                fMixDesc.innerText = `${openAccounts} accounts represents an ideal diversified credit mix of files, reducing overall risk.`;
+            } else {
+                fMixBadge.innerText = 'Fair';
+                fMixBadge.className = 'text-[10px] font-bold px-2 py-0.5 rounded bg-amber-50 text-amber-600 border border-amber-100';
+                fMixProg.className = 'h-full bg-[#f39c12] rounded-full transition-all duration-1000';
+                fMixProg.style.width = '55%';
+                fMixDesc.innerText = `Large number of open accounts (${openAccounts}) may represent an elevated loan-taking pattern.`;
+            }
+
+            // Factor 4: Loan-To-Income (LTI) Ratio (Upgraded and corrected!)
+            const fDtiBadge = document.getElementById('factor-dti-badge');
+            const fDtiProg = document.getElementById('factor-dti-progress');
+            const fDtiDesc = document.getElementById('factor-dti-desc');
+            const ltiRatio = annualIncome > 0 ? (loanAmount / annualIncome) : 0.0;
+
+            if (ltiRatio <= 1.5) {
+                fDtiBadge.innerText = 'Excellent';
+                fDtiBadge.className = 'text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-50 text-emerald-600 border border-emerald-100';
+                fDtiProg.className = 'h-full bg-[#2ecc71] rounded-full transition-all duration-1000';
+                fDtiProg.style.width = '100%';
+                fDtiDesc.innerText = `Outstanding Loan-to-Income ratio of ${ltiRatio.toFixed(2)}x. You represent extremely low leverage risk.`;
+            } else if (ltiRatio <= 3.0) {
+                fDtiBadge.innerText = 'Good';
+                fDtiBadge.className = 'text-[10px] font-bold px-2 py-0.5 rounded bg-blue-50 text-blue-600 border border-blue-100';
+                fDtiProg.className = 'h-full bg-[#3498db] rounded-full transition-all duration-1000';
+                fDtiProg.style.width = '80%';
+                fDtiDesc.innerText = `Healthy Loan-to-Income ratio of ${ltiRatio.toFixed(2)}x. Leveraged borrowing is kept fully safe.`;
+            } else if (ltiRatio <= 4.5) {
+                fDtiBadge.innerText = 'Fair';
+                fDtiBadge.className = 'text-[10px] font-bold px-2 py-0.5 rounded bg-amber-50 text-amber-600 border border-amber-100';
+                fDtiProg.className = 'h-full bg-[#f39c12] rounded-full transition-all duration-1000';
+                fDtiProg.style.width = '50%';
+                fDtiDesc.innerText = `Elevated Loan-to-Income ratio of ${ltiRatio.toFixed(2)}x. Underwriters may consider this a moderate leverage risk.`;
+            } else {
+                fDtiBadge.innerText = 'Poor';
+                fDtiBadge.className = 'text-[10px] font-bold px-2 py-0.5 rounded bg-red-50 text-red-600 border border-red-100';
+                fDtiProg.className = 'h-full bg-[#e74c3c] rounded-full transition-all duration-1000';
+                fDtiProg.style.width = '20%';
+                fDtiDesc.innerText = `Critical Loan-to-Income ratio of ${ltiRatio.toFixed(2)}x. Borrowing more than 4.5x of annual income is high risk.`;
+            }
+        }
+
+        function calculateScore(age, loanAmount, annualIncome, tenure, residenceType, openAccounts, loanPurpose, utilization, loanType, avgDpd) {
+            let score = 600.0;
+
+            // 1. Credit Utilization Adjustment
+            let utilAdj = 80.0 - (1.8 * utilization);
+            score += utilAdj;
+
+            // 2. Avg DPD Adjustment
+            let dpdPenalty = 90.0 - (7.5 * avgDpd);
+            let dpdAdj = Math.max(-180.0, dpdPenalty);
+            score += dpdAdj;
+
+            // 3. Debt to Income / Leverage (LTI) Adjustment
+            const ratio = loanAmount / annualIncome;
+            let ratioPenalty = 30.0 - (150.0 * ratio);
+            let ratioAdj = Math.max(-80.0, Math.min(30.0, ratioPenalty));
+            score += ratioAdj;
+
+            // 4. Age Adjustment
+            let ageReward = -20.0 + ((age - 18) * 1.5);
+            let ageAdj = Math.max(-20.0, Math.min(40.0, ageReward));
+            score += ageAdj;
+
+            // 5. Open Accounts Adjustment
+            let oaAdj = 0;
+            if (openAccounts === 0) {
+                oaAdj = -30.0;
+            } else {
+                if (openAccounts <= 7) {
+                    oaAdj = 20.0 + ((openAccounts - 1) * 5.0);
+                } else if (openAccounts <= 10) {
+                    oaAdj = 50.0;
+                } else {
+                    oaAdj = Math.max(-40.0, 50.0 - ((openAccounts - 10) * 3.0));
+                }
+            }
+            score += oaAdj;
+
+            // 6. Residence Adjustment
+            if (residenceType === 'Owned') score += 35.0;
+            else if (residenceType === 'Mortgaged') score += 15.0;
+            else score -= 15.0;
+
+            // 7. Loan Type Adjustment
+            if (loanType === 'Secured') score += 25.0;
+            else score -= 20.0;
+
+            // 8. Purpose Adjustment
+            if (loanPurpose === 'Home' || loanPurpose === 'Education') score += 20.0;
+            else if (loanPurpose === 'Business') score += 10.0;
+            else score -= 10.0;
+
+            return Math.max(300, Math.min(900, Math.round(score)));
+        }
+
+        async function updateDashboard() {
+            const age = parseInt(document.getElementById('input-age').value) || 28;
+            const loanAmount = parseFloat(document.getElementById('input-loan-amount').value) || 2560000;
+            const annualIncome = parseFloat(document.getElementById('input-annual-income').value) || 12000000;
+            const tenure = parseInt(document.getElementById('input-tenure').value) || 36;
+            const residenceType = document.getElementById('input-residence').value;
+
+            const accountsVal = parseInt(document.getElementById('input-accounts').value);
+            const openAccounts = isNaN(accountsVal) ? 1 : accountsVal;
+
+            const loanPurpose = document.getElementById('input-purpose').value;
+
+            const utilizationVal = parseFloat(document.getElementById('input-utilization').value);
+            const utilization = isNaN(utilizationVal) ? 90 : utilizationVal;
+
+            const loanType = document.getElementById('input-loan-type').value;
+
+            const dpdVal = parseInt(document.getElementById('input-dpd').value);
+            const avgDpd = isNaN(dpdVal) ? 20 : dpdVal;
+
+            // Render top badges inside the form
+            document.getElementById('loan-amount-badge').innerText = '₹ ' + loanAmount.toLocaleString('en-IN');
+            document.getElementById('annual-income-badge').innerText = '₹ ' + annualIncome.toLocaleString('en-IN');
+
+            // Render Loan-to-Income live badge inside the form
+            const ltiRatio = annualIncome > 0 ? (loanAmount / annualIncome) : 0.0;
+            document.getElementById('input-lti-ratio-badge').innerText = ltiRatio.toFixed(2) + 'x';
+
+            const score = calculateScore(age, loanAmount, annualIncome, tenure, residenceType, openAccounts, loanPurpose, utilization, loanType, avgDpd);
+            const pd = ((900 - score) / 600.0 * 100.0).toFixed(2);
+
+            let status = "Poor";
+            let advice = "⚠️ Work on reducing your credit utilization and paying on time to improve your score.";
+            if (score > 500 && score <= 650) {
+                status = "Average";
+                advice = "⚠️ Your credit score is average. Work on lowering outstanding card balances and establishing on-time payment streams.";
+            } else if (score > 650 && score <= 750) {
+                status = "Good";
+                advice = "👍 Solid credit! Keep doing what you're doing, and maintain card utilization under 30% to advance further.";
+            } else if (score > 750) {
+                status = "Excellent";
+                advice = "✨ Outstanding credit! You qualify for our absolute lowest prime interest rates and exclusive elite credit offers.";
+            }
+
+            const prevScore = parseInt(document.getElementById('score-value').innerText) || 300;
+            if (prevScore !== score) {
+                animateValue(document.getElementById('score-value'), prevScore, score, 600);
+            }
+
+            const progress = (score - 300) / 600.0;
+            const dashOffset = 235.6 - (progress * 235.6);
+            document.getElementById('gauge-progress').style.strokeDashoffset = dashOffset;
+
+            let color = "#e74c3c";
+            let alertBoxClass = "border-red-200 bg-red-50 text-[#e74c3c]";
+            let alertIconClass = "text-[#e74c3c]";
+
+            if (status === "Excellent") {
+                color = "#2ecc71";
+                alertBoxClass = "border-emerald-200 bg-emerald-50 text-[#03543f]";
+                alertIconClass = "text-[#047857]";
+            } else if (status === "Good") {
+                color = "#3498db";
+                alertBoxClass = "border-blue-200 bg-blue-50 text-[#0c4a6e]";
+                alertIconClass = "text-[#0284c7]";
+            } else if (status === "Average" || status === "Fair") {
+                color = "#f39c12";
+                alertBoxClass = "border-amber-200 bg-amber-50 text-[#92400e]";
+                alertIconClass = "text-[#d97706]";
+            }
+
+            let displayStatus = (status === "Average" || status === "Fair") ? "AVERAGE" : status.toUpperCase();
+            document.getElementById('score-rating-text').innerText = displayStatus;
+            document.getElementById('score-rating-text').style.color = color;
+
+            let displayHeaderStatus = (status === "Average" || status === "Fair") ? "Average" : status;
+            document.getElementById('status-title').innerText = `Status: ${displayHeaderStatus}`;
+            document.getElementById('status-title').style.color = color;
+
+            document.getElementById('pd-value').innerText = `Probability of Default: ${pd}%`;
+
+            // Render evaluation summary dynamically
+            document.getElementById('score-evaluation-summary').innerText =
+                `Your score of ${score} is evaluated based on ${openAccounts} open account${openAccounts !== 1 ? 's' : ''}, your credit utilization of ${utilization}%, and your average DPD of ${avgDpd} days.`;
+
+            const adviceBox = document.getElementById('advice-box');
+            adviceBox.className = `p-4 rounded-xl border flex items-start gap-2.5 shadow-sm mt-4 transition-all ${alertBoxClass}`;
+            adviceBox.innerHTML = `
+                <i data-lucide="info" class="w-5 h-5 flex-shrink-0 mt-0.5 ${alertIconClass}"></i>
+                <span>${advice}</span>
+            `;
+
+            updateFactors(score, avgDpd, utilization, openAccounts, loanAmount, annualIncome);
+            updateOffers(score);
+
+            document.getElementById('sim-current-val').innerText = score;
+            triggerSimulationCalculations(score);
+        }
+
+        async function triggerSimulationCalculations(currentScore) {
+            const age = parseInt(document.getElementById('input-age').value) || 28;
+            const loanAmount = parseFloat(document.getElementById('input-loan-amount').value) || 2560000;
+            const annualIncome = parseFloat(document.getElementById('input-annual-income').value) || 12000000;
+            const tenure = parseInt(document.getElementById('input-tenure').value) || 36;
+            const residenceType = document.getElementById('input-residence').value;
+            const openAccounts = parseInt(document.getElementById('input-accounts').value) || 1;
+            const loanPurpose = document.getElementById('input-purpose').value;
+            const loanType = document.getElementById('input-loan-type').value;
+
+            const simUtil = parseFloat(document.getElementById('sim-util-slider').value);
+            const simDpd = parseInt(document.getElementById('sim-dpd-slider').value);
+
+            document.getElementById('sim-util-badge').innerText = simUtil + '%';
+            document.getElementById('sim-dpd-badge').innerText = simDpd + ' days';
+
+            const potentialScore = calculateScore(age, loanAmount, annualIncome, tenure, residenceType, openAccounts, loanPurpose, simUtil, loanType, simDpd);
+
+            document.getElementById('sim-potential-val').innerText = potentialScore;
+
+            const diff = potentialScore - currentScore;
+            const diffEl = document.getElementById('sim-diff-val');
+
+            if (diff > 0) {
+                diffEl.innerText = diff;
+                diffEl.parentElement.className = "text-xs text-emerald-400 font-extrabold bg-emerald-500/10 border border-emerald-500/20 py-2 px-4 rounded-xl inline-flex items-center gap-1";
+                diffEl.parentElement.innerHTML = `<i data-lucide="sparkles" class="w-4 h-4 text-emerald-400"></i> Rating Boost: +<span id="sim-diff-val">${diff}</span> points!`;
+            } else if (diff < 0) {
+                diffEl.innerText = Math.abs(diff);
+                diffEl.parentElement.className = "text-xs text-red-400 font-extrabold bg-red-500/10 border border-red-200/20 py-2 px-4 rounded-xl inline-flex items-center gap-1";
+                diffEl.parentElement.innerHTML = `<i data-lucide="trending-down" class="w-4 h-4 text-red-400"></i> Score Drops: <span id="sim-diff-val">${diff}</span> points!`;
+            } else {
+                diffEl.innerText = "0";
+                diffEl.parentElement.className = "text-xs text-slate-300 font-extrabold bg-white/10 border border-white/10 py-2 px-4 rounded-xl inline-flex items-center gap-1";
+                diffEl.parentElement.innerHTML = `<i data-lucide="minus" class="w-4 h-4 text-slate-300"></i> No score change!`;
+            }
+            lucide.createIcons();
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const utilSlider = document.getElementById('input-utilization-slider');
+            const utilInput = document.getElementById('input-utilization');
+            const utilBadge = document.getElementById('utilization-badge');
+            utilSlider.addEventListener('input', (e) => {
+                utilInput.value = e.target.value;
+                utilBadge.innerText = e.target.value + '%';
+                updateDashboard();
+            });
+
+            const dpdSlider = document.getElementById('input-dpd-slider');
+            const dpdInput = document.getElementById('input-dpd');
+            const dpdBadge = document.getElementById('dpd-badge');
+            dpdSlider.addEventListener('input', (e) => {
+                dpdInput.value = e.target.value;
+                dpdBadge.innerText = e.target.value + ' days';
+                if (e.target.value == 0) {
+                    dpdBadge.className = "text-xs font-bold px-2 py-0.5 rounded bg-emerald-50 text-emerald-600 border border-emerald-100";
+                } else if (e.target.value <= 10) {
+                    dpdBadge.className = "text-xs font-bold px-2 py-0.5 rounded bg-blue-50 text-blue-600 border border-blue-100";
+                } else if (e.target.value <= 30) {
+                    dpdBadge.className = "text-xs font-bold px-2 py-0.5 rounded bg-amber-50 text-amber-600 border border-amber-100";
+                } else {
+                    dpdBadge.className = "text-xs font-bold px-2 py-0.5 rounded bg-red-50 text-red-600 border border-red-100";
+                }
+                updateDashboard();
+            });
+
+            const simUtilSlider = document.getElementById('sim-util-slider');
+            const simDpdSlider = document.getElementById('sim-dpd-slider');
+            simUtilSlider.addEventListener('input', () => {
+                const currentScore = parseInt(document.getElementById('score-value').innerText) || 456;
+                triggerSimulationCalculations(currentScore);
+            });
+            simDpdSlider.addEventListener('input', () => {
+                const currentScore = parseInt(document.getElementById('score-value').innerText) || 456;
+                triggerSimulationCalculations(currentScore);
+            });
+
+            const reactiveInputs = [
+                'input-age', 'input-loan-amount', 'input-annual-income',
+                'input-tenure', 'input-residence', 'input-accounts',
+                'input-purpose', 'input-loan-type', 'input-utilization', 'input-dpd'
+            ];
+            reactiveInputs.forEach(id => {
+                const el = document.getElementById(id);
+                el.addEventListener('input', updateDashboard);
+                el.addEventListener('change', updateDashboard);
+            });
+
+            updateDashboard();
+            lucide.createIcons();
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a2a1051b9aa34907',t:'MTc4NjU1Mzg1NQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
